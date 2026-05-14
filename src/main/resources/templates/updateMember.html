@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>회원수정</title>
+</head>
+<body>
+    <h1>회원등록</h1>
+    <form>
+        <div>
+            <label>ID : 1</label>
+            <input type="text">
+        </div>
+        <div>
+            <label>이름</label>
+            <input type="text">
+        </div>
+        <div>
+            <label>나이</label>
+            <input type="number" min="0" max="120">
+        </div>
+        <div>
+        <label>주소</label>
+        <input type="text">
+    </div>
+        <input type="submit" value="수정">
+    </form>
+    <form>
+<a th:href="@{/member/view}">목록으로 돌아가기</a>
+    </form>
+<br>
+<form>
+    <select name="type">
+        <option value="">검색 조건 선택</option>
+        <option value="name">이름</option>
+        <option value="address">주소</option>
+    </select>
+    <input type="text" name="keyword">
+    <input type="submit" value="검색">
+</form>
+</body>
+</html>
